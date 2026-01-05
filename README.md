@@ -5,7 +5,8 @@
 ### 1、仓库简介
 1. 本仓库建于 2026/1/1，存放本人 2025/12/31 及之后的博客，相当于一个备份
 2. 博客分类（by 豆包）  
-![博客分类](/assets/images/仓库首页/仓库简介/BlogTypesV3.png)
+![博客分类](/assets/images/仓库首页/仓库简介/BlogTypesV3.png)  
+3. → [知乎博客](https://www.zhihu.com/people/14-94-73-44) ←
 
 
 ### 2、事情的起因  
