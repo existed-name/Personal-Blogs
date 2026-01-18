@@ -9,7 +9,7 @@
 
 3. 进入DataGrip后，发现左侧数据库展示栏（`Database Explorer`）并没有展示新创建的数据库文件夹
 
-4. 点击左上的`Refresh`、重启DataGrip也不显示
+4. 点击左上的`Refresh`、重启DataGrip也不显示  
 ![刷新展示栏](/assets/images/问题排查/DataGrip不能展示新建的数据库/RefreshDatabaseExplorer.png "刷新展示栏")
 
 
