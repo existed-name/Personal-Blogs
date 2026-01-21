@@ -1,6 +1,6 @@
 # 解决Gemini异常：`Something Went Wrong`
 
-> <u>[个人博客仓库]()</u>
+> <u>[个人博客仓库](https://github.com/existed-name/Personal-Blogs)</u>
 ---
 
 ## 1、背景
