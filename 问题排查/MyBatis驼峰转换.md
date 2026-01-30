@@ -1,10 +1,9 @@
 # MyBatis驼峰转换
 
-
 ---
 
 ## 1、问题描述
-用MyBatis查询数据时，出现了`null`，之后发现原因是Java对象的属性名 ≠ 数据库字段名，比如属性是`updateTime`，但在数据库里面是`update_time`，于是`SELECT updateTime FROM user_table`就找不到，只能返回`null`
+用MyBatis查询数据时，出现了`null`（但数据库里不是`null`），之后发现原因是**Java对象的属性名 ≠ 数据库字段名**，比如属性是`updateTime`，但在数据库里面是`update_time`，于是`@Select( "SELECT updateTime FROM user_table" )`就找不到，只能返回`null`
 
 
 
@@ -70,7 +69,7 @@ SELECT update_time AS updateTime FROM user_table
 ```
 > 自闭合标签`/>`等价于 `<>  中间没有东西  </>`  
 >   
-> 因为目标在前，源头在后所以通常property前column后😂不过我想的是`column to property`，所以column前、property后应该也可以，不过`@Result`、`resultMap`没有限制顺序，只是指定值  
+> 因为目标在前，源头在后所以通常`property`前`column`后😂不过我想的是`column to property`，所以`column`前、`property`后应该也可以，不过`@Result`、`resultMap`没有限制顺序，只是指定值  
 >   
 > 因为`resultMap`比`@Results`长串注解更清晰&功能更多，所以比较复杂的SQL用XML的`resultMap`
 
