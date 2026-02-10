@@ -103,7 +103,19 @@ Dear Google Support Team, my account was disabled shortly after creation. I am a
 
 
 ## 6、附
+### (1)
 现在就慢慢养号吧，每天发几个邮件、找AI问下注意事项，等几天再浅浅用1下Gemini，然后把这个号过渡到可以“正常用”Gemini的阶段
+
+
+### (2)
+我室友去年注册1个Google号：
+* 没弄安全设置（辅助手机号、验证器、2步验证）
+* 只有辅助邮箱
+* 经常刷油管
+* 还有一个细节：他的Google账号有头像
+然而他用Google登录过各种网站，只有X（Twitter）被封号，其他完全没事——包括Google账号
+
+所以我觉得还是我的操作不像人😂
 
 ---
 
