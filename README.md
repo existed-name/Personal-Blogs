@@ -7,7 +7,6 @@
 <!-- 仓库动态 -->
 ![Last Commit](https://img.shields.io/github/last-commit/existed-name/Personal-Blogs?color=green&label=Last%20Update&logo=github)
 ![Repo Size](https://img.shields.io/github/repo-size/existed-name/Personal-Blogs?color=blueviolet&logo=github)
-![Profile Views](https://komarev.com/ghpvc/?username=existed-name&color=brightgreen)<!-- 访客统计（稳定版） -->
 ![Stars](https://img.shields.io/github/stars/existed-name/Personal-Blogs?style=social&logo=github)<!-- 社交数据 -->
 
 </div>
