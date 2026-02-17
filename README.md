@@ -56,3 +56,21 @@
 
 </details> 
 
+
+<details>
+<summary>
+<h2>🎖 纪念</h2>
+</summary>
+
+1. 我的**第1个正式仓库**: <u>[Java健康计算器](https://github.com/existed-name/Java-Health-Calculator)</u>😊(第1个非正式仓库是用来测试各种操作的)， 建于 2025/7/17
+
+2. 2025/9/3 一时兴起，把之前的一些C语言程序翻出来，建了**1堆仓库**，反正有啥都往仓库里面甩😄建仓就完了
+
+3. 2026/2/3 建仓: <u>[课程评价收割机🚀](https://github.com/existed-name/Course-Evaluation-AutoFiller)</u>，第1次弄比较"高端"的仓库🥰——有徽章/logo、有各种emoji、有Release、有折叠段落……
+
+4. 2026/2/15 进来后发现了人生中的的**第1颗star**, 高兴坏了🥳
+   ![](/assets/images/仓库首页/纪念/01-MyFirstStar.png "")
+   (以前都是自娱自乐, 自己给自己star🤣)
+
+   
+</details> 
