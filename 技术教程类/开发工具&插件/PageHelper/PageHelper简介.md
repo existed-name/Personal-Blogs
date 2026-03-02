@@ -110,6 +110,8 @@ pagehelper:
     List< Emp> list(  );
 ```
 
+对了，之前的`list`方法一定要去掉，`Mapper`接口不可以方法重载、每个方法都是独特命名
+
 
 ### (2)`EmpServiceImpl`
 
