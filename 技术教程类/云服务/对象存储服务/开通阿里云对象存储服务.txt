@@ -1,0 +1,156 @@
+# 开通阿里云对象存储服务
+
+> <u>[个人博客仓库](https://github.com/existed-name/Personal-Blogs/blob/main/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B%E7%B1%BB/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%26%E6%8F%92%E4%BB%B6/PageHelper/PageHelper%E7%AE%80%E4%BB%8B.md)</u>
+
+---
+
+## 1、描述
+直接把文件存在本地可能会有磁盘损坏丢失数据、容量有限等等问题，于是可以考虑换用云服务的对象存储服务(`Object Storage Service`)，这里记录阿里云OSS的开通过程
+
+备注: 我是先开通，再点击的试用，可以先点击试用、后开通
+
+
+
+## 2、操作
+### (1)注册&实名认证
+去<u>[登录界面](https://account.aliyun.com)</u>注册 → 进去后点击右上角头像 → 点击`账号`进入账号管理界面 → 认证(用支付宝扫码即可)
+
+
+### (2)开通OSS
+左上角菜单栏 → `产品与服务` → 搜索`对象存储` → 开通  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/01-SearchForOss.png "")  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/02.png "")    
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/03.png "")    
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/04.png "")  
+
+
+### (3)创建Bucket
+进去后，左侧菜单栏 → `bucket列表` → `创建bucket`  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/05-BucketList.png "")  
+
+bucket设置用默认即可
+* 地域：北京
+* 存储类型：标准存储
+* 同城冗余存储
+* 读写权限：私有  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/06-CreateBucket.png "")  
+
+
+### (4)创建RAM用户&拿到AccessKey
+右上角头像 → 点击`Access Key` → `使用RAM用户创建AccessKey`  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/07-AccessKey.png "")    
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/08-UseRamAccessKey.png "")  
+
+来到<u>[RAM用户快速创建界面](https://ram.console.aliyun.com/overview?activeTab=workflow)</u>，点击`快速开始` → 翻到下面`向指定 OSS Bucket 写入对象`，这个只有上传下载文件的权限，不过之后可以修改权限  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/09.png "")    
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/10.png "")  
+
+填好`登录名称`、`策略名称`，`OSS Bucket`那里选择刚刚创建的Bucket，然后翻到下面点击`执行配置`  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/11-CreateRamUser.png "")  
+
+复制保存好自己的AccessKey  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/12-GetAccessKey.png "")  
+
+
+### (5)配置AccessKey环境变量
+打开cmd命令行(我的不需要管理员身份运行就可以配置成功，各位可以试一下)
+
+```bash
+配置系统的环境变量
+set OSS_ACCESS_KEY_ID=我的id
+set OSS_ACCESS_KEY_SECRET=我的密码
+
+让更改生效
+setx OSS_ACCESS_KEY_ID "%OSS_ACCESS_KEY_ID%"
+setx OSS_ACCESS_KEY_SECRET "%OSS_ACCESS_KEY_SECRET%"
+
+验证环境变量是否生效( 会吐出id、密码 )
+echo %OSS_ACCESS_KEY_ID%
+echo %OSS_ACCESS_KEY_SECRET%
+```
+
+
+### (6)修改权限
+右上角头像 → `访问控制` → 来到<u>[RAM权限策略设置界面](https://ram.console.aliyun.com/policies)</u> → 找到创建RAM用户时创建的权限策略，点击它   
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/13-PermissionSettings.png "")  
+
+然后`编辑权限策略` → `脚本编辑`，可以找AI给出对应权限的JSON代码  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/14.png "")  
+
+这里是对Bucket的文件对象有增删改查的权限的配置
+```json
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:ListObjects",
+        "oss:GetBucketStat",
+        "oss:GetBucketInfo"
+      ],
+      "Resource": "acs:oss:*:*:Bucket的名字"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "oss:GetObject",
+        "oss:PutObject",
+        "oss:DeleteObject"
+      ],
+      "Resource": "acs:oss:*:*:Bucket的名字/*"
+    }
+  ]
+}
+```
+
+
+### (7)添加依赖
+回到<u>[对象存储OSS界面](https://oss.console.aliyun.com/overview)</u> → 左边菜单栏最下面`SDK下载` → `SDK示例` → `在文档中心打开`  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/15-SDK.png "")  
+
+来到<u>[OSS Java SDK V1文档说明](https://help.aliyun.com/zh/oss/developer-reference/oss-java-sdk/)</u>，添加Maven依赖到`pom.xml`  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/16-SdkDependency.png "")  
+
+
+### (8)测试
+看到左侧菜单栏 → `对象/文件` → 这里`上传文件`/`下载文件`/`列举文件`等等都有代码，复制到Maven/SpringBoot项目中 → 然后修改源码:
+* 把代码中的`hangzhou`(杭州)改成自己bucket所在地域的拼音(`beijing`)
+* 补充自己的`bucketName`  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/17-TestSdkCode.png "")  
+
+之后运行代码，观察控制台输出、阿里云bucket里面的文件有没有变化
+
+
+### (9)试用
+<u>[阿里云首页](https://www.aliyun.com/)</u> → `权益` → `免费试用`(当然) → 来到<u>[对象存储免费试用界面](https://free.aliyun.com/?searchKey=OSS)</u>  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/18-Trial.png "")  
+
+试用后，左上角菜单栏 → 来到<u>[对象存储 OSS](https://oss.console.aliyun.com/overview)</u> → 看到`资源包管理`，生效的资源包就是试用的资源  
+![](/assets/images/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务/19-ResourcePack.png "")  
+
+
+---
+
+> **往期文章**  
+> <u>[PageHelper简介](/技术教程类/开发工具&插件/PageHelper简介.md)</u>  
+> <u>[IDEAMaven项目打包](/技术教程类/项目打包/IDEAMaven项目打包.md)</u>  
+> <u>[MyBatis驼峰转换](/技术教程类/框架使用/MyBatis/MyBatis驼峰转换.md)</u>  
+> <u>[MyBatis基础学习笔记](/技术教程类/框架使用/MyBatis/MyBatis基础学习笔记.md)</u>  
+> <u>[MyBatis配置Mapper.xml模板](/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板.md)</u>  
+> <u>[MyBatis配置SQL注解提示](/技术教程类/框架使用/MyBatis/MyBatis配置SQL注解提示.md)</u>  
+> <u>[一道SQL分组过滤题](/数据结构与算法刷题/SQL/一道SQL分组过滤题.md)</u>  
+> <u>[试一下手写having关键字](/技术探索&评测/试一下手写having关键字.md)</u>  
+> ……  
+
+> **往期文章**  
+> <u>[PageHelper简介](https://zhuanlan.zhihu.com/p/2011824221676904705)</u>  
+> <u>[IDEAMaven项目打包](https://zhuanlan.zhihu.com/p/2004174945807271210)</u>  
+> <u>[MyBatis驼峰转换](https://zhuanlan.zhihu.com/p/2000558387893666721)</u>  
+> <u>[MyBatis基础学习笔记](https://zhuanlan.zhihu.com/p/1999545483534833590)</u>  
+> <u>[MyBatis配置Mapper.xml模板](https://zhuanlan.zhihu.com/p/1999463058645464122)</u>  
+> <u>[MyBatis配置SQL注解提示](https://zhuanlan.zhihu.com/p/1998768615604912707)</u>  
+> <u>[一道SQL分组过滤题](https://zhuanlan.zhihu.com/p/1994499563340445064)</u>  
+> <u>[试一下手写having关键字](https://zhuanlan.zhihu.com/p/1994430675177205932)</u>  
+> ……  
+
