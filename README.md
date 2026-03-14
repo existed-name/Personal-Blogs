@@ -72,5 +72,8 @@
    ![](/assets/images/仓库首页/纪念/01-MyFirstStar.png "")
    (以前都是自娱自乐, 自己给自己star🤣)
 
+5. 2026/3/14 发现昨天竟然有了**1个 follower**, 也还是昨天, <u>[知乎账号](https://www.zhihu.com/people/14-94-73-44)</u>突破 100 followers, 感谢大家的关注、鼓励🤗
+   ![](/assets/images/仓库首页/纪念/02-MyFirstFollower.png)  
+   继续努力✊~~~
    
 </details> 
