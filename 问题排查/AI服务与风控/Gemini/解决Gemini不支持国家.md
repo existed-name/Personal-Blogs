@@ -4,7 +4,7 @@
 
 ## 1、背景
 * **配置**: `C lash^Ver ge2.4.4`、`规则模式`、开启了`DNS覆写`
-* **问题描述**: 虽然解决了<u>[Gemini Somthing Went Wrong 的问题](/问题排查/解决Gemini异常：SomethingWentWrong.md)</u>，但用了4个星期，有2次遇到地区限制。第1次的时候，我把它冷处理: 关了，不管它，第2天好了。但昨天又来，实在受不了，就折腾1天解决了，这里记录解决方法
+* **问题描述**: 虽然解决了<u>[Gemini Somthing Went Wrong 的问题](/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong.mdingWentWrong.md)</u>，但用了4个星期，有2次遇到地区限制。第1次的时候，我把它冷处理: 关了，不管它，第2天好了。但昨天又来，实在受不了，就折腾1天解决了，这里记录解决方法
 
 
 
@@ -16,8 +16,8 @@ DNS泄露，它看得到我的国内DNS服务器，于是就认为我不在国�
 ## 3、解决方法
 ### (1)修改`NDS覆写`规则
 打开软件 → `设置` → `C lash设置` → 进入`DNS覆写`设置 → 进入右上角`高级`
-![](/assets/images/问题排查/解决Gemini不支持国家/01-DnsOverwriting.png "")  
-![](/assets/images/问题排查/解决Gemini不支持国家/02-Advanced.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/01-DnsOverwriting.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/02-Advanced.png "")  
 
 然后可以看到一堆yaml格式的代码，用以下代码覆盖掉
 ```yaml
@@ -95,38 +95,38 @@ dns:
 2. `Win + I`打开设置 → `网络和Internet`
 * **如果用的网线**: `以太网` → `DNS服务器分配`改为自动而不是手动设定(以前没爬楼梯的时候手动指定过`8.8.8.8`、`8.8.4.4`，虽然好像没什么用😂现在才发现这个是给网线用的😅)
 * **用Wifi**: `WLAN` → 设置当前WiFi的属性 → 自动分配DNS服务器
-![](/assets/images/问题排查/解决Gemini不支持国家/03-WlanDnsServer.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/03-WlanDnsServer.png "")  
 
 3. `网络和Internet` → `高级网络设置` → 当前在用的`网络适配器` → `更多适配器选项`编辑 → 取消勾选`Intern协议版本6(Ipv6)` → 确定
-![](/assets/images/问题排查/解决Gemini不支持国家/04-EditAdapter.png "")  
-![](/assets/images/问题排查/解决Gemini不支持国家/05-DisableIpv6.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/04-EditAdapter.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/05-DisableIpv6.png "")  
 
 
 ### (3)Edge设置
 1. 设置 → 隐私 → 安全 → 关闭`使用安全DNS`(不过默认就是关的，只是确认一下)——否则浏览器会绕过`C^lash`自己解析
-![](/assets/images/问题排查/解决Gemini不支持国家/06-DisableSecureDns.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/06-DisableSecureDns.png "")  
 
 2. 地址栏搜索`edge://flags/`，进入实验功能 → 搜索`WebRTC`，启用`enable-webrtc-hide-local-ips-with-mdns`，防止网站通过 WebRTC 获取真实内网`I P`(应该不用专门去下载扩展了吧🤔)
-![](/assets/images/问题排查/解决Gemini不支持国家/07-WebRTC.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/07-WebRTC.png "")  
 
 3. 隐私 → 网站权限 → 所有权限 → 位置，改成`询问`(默认就是询问)
-![](/assets/images/问题排查/解决Gemini不支持国家/08-SiteLocation.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/08-SiteLocation.png "")  
 
 4. 电脑系统设置 → 关闭`允许应用访问位置`、`定位服务`。让网站通过`I^P`定位
-![](/assets/images/问题排查/解决Gemini不支持国家/09-SystemLocation.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/09-SystemLocation.png "")  
 
 
 
 ## 4、检验方法
 > 可以开无痕浏览或者新的EdgeProfile来测试
 1. Google搜索页面位置: 进入<u>https://google.com/</u>，随便搜1个东西，翻到页面底部查看显示的位置信息。如果显示非国内地址那就行了；而且如果泄露了，可能进去的网址是`https://google.com.hk`(DNS服务器是香港的)
-![](/assets/images/问题排查/解决Gemini不支持国家/10-GoogleSearch.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/10-GoogleSearch.png "")  
 
 2. Gmail/Google Account的右上角`google apps`，可以看到YouTube、Gemini
-![](/assets/images/问题排查/解决Gemini不支持国家/11-GoogleApps.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/11-GoogleApps.png "")  
 
 3. YouTube Premium测试: 访问<u>https://youtube.com/red</u>，如果正常显示YouTube Premium的订阅选项和价格，说明DNS没泄露(或者泄露比较少)；否则会显示国家地区不支持
-![](/assets/images/问题排查/解决Gemini不支持国家/12-YoutubePremium.png "")  
+![](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini不支持国家/12-YoutubePremium.png "")  
 
 4. 也可以用测试工具: <u>https://whoer.net/zh</u>、<u>https://browserleaks.com/dns</u>、<u>https://www.browserscan.net/zh/</u>等等，但是注意 **`规则模式`下测试一定有泄露，这是正常现象，只要能用Gemini就说明没问题**
 
@@ -159,6 +159,6 @@ dns:
 > **往期文章**  
 > <u>[注册Google又被封了😅](/技术教程类/注册Google又被封了.md)</u>  
 > <u>[Edge防AI风控配置](/技术教程类/Edge防AI风控配置.md)</u>  
-> <u>[解决Gemini异常：SomethingWentWrong](/问题排查/解决Gemini异常：SomethingWentWrong.md)</u>  
+> <u>[解决Gemini异常：SomethingWentWrong](/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong.mdingWentWrong.md)</u>  
 > <u>[Claude注册](/技术教程类/Claude注册.md)</u>  
 > ……  

@@ -9,15 +9,15 @@ GitHub网页端删除了图片文件夹、修改这个文件夹的图片内容�
 
 ## 2、原因
 * 网页缓存还是原来的图片
-![原因](/assets/images/问题排查/解决Markdown文档图片缓存问题/01-Causes.png "原因")  
+![原因](/assets/images/问题排查/开发工具与IDE/Version-Control/GitHub/解决Markdown文档图片缓存问题/01-Causes.png "原因")  
 
 
 ## 3、解决方法
 * 我是直接`Ctrl + F5`刷新
-![解决方法](/assets/images/问题排查/解决Markdown文档图片缓存问题/02-Solutions.png "解决方法")  
+![解决方法](/assets/images/问题排查/开发工具与IDE/Version-Control/GitHub/解决Markdown文档图片缓存问题/02-Solutions.png "解决方法")  
 
 备注：需要**先保存好自己写的东西，再刷新**。我是先写在记事本，再复制过去的，所以不怕刷新丢失进度。不过GitHub网页也有草稿备份，可以刷新后直接加载
-![GitHub自带的备份](/assets/images/问题排查/解决Markdown文档图片缓存问题/03-Restore.png "GitHub自带的备份")  
+![GitHub自带的备份](/assets/images/问题排查/开发工具与IDE/Version-Control/GitHub/解决Markdown文档图片缓存问题/03-Restore.png "GitHub自带的备份")  
 
 ---
 

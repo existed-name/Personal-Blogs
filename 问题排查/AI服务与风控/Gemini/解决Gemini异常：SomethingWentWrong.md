@@ -11,7 +11,7 @@
 （3）老号登录Claude，小号登录Grok，都可以正常使用，Gmail没问题
 
 （4）然而3个星期以来，Gemini一登录过后就是`Something went wrong`/`出了点问题，请稍后再试`，只能游客模式。Edge无痕浏览/普通窗口、隔一段时间就清除所有浏览数据，依然不行   
-![人都麻了](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/1-SomethingWentWrong.png "人都麻了")
+![人都麻了](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/1-SomethingWentWrong.png "人都麻了")
 
 
 
@@ -28,41 +28,41 @@
 
 
 （3）在`Security & sign-in`中，发现`Recovery emil`竟然没有验证（我记得之前绑定的时候验证过），于是验证邮箱  
-![安全设置](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/2-Security&Sign-in.png "安全设置")  
-![验证恢复邮箱](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/3-VerifyRecoveryEmail.png "验证恢复邮箱")
+![安全设置](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/2-Security&Sign-in.png "安全设置")  
+![验证恢复邮箱](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/3-VerifyRecoveryEmail.png "验证恢复邮箱")
 
 
 （4）然后设置`2-Step Verification`  
 ①点击`Authenticator`  
-![添加验证器](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/4-TwoStepVerification.png "添加验证器")  
+![添加验证器](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/4-TwoStepVerification.png "添加验证器")  
 
 ②这里需要在手机下载验证器app，作为双因素验证（`2-Factor Authentication`）。`Microsoft Authenticator`/`Google Authenticator`都可以，前者手机应用商店就可以找到（可能就叫`Authenticator`），后者需要上网 + Gplay商店  
-![下载Authenticator](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/5-DownloadAuthenticator.png "下载Authenticator")  
+![下载Authenticator](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/5-DownloadAuthenticator.png "下载Authenticator")  
 
 ③回到①，点击`Set up authenticator`  
-![绑定Authenticator](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/6-SetUpAuthenticator.png "绑定Authenticator")   
+![绑定Authenticator](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/6-SetUpAuthenticator.png "绑定Authenticator")   
 
 ④弹出二维码，用手机authenticator扫码  
-![用验证器扫码](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/7-ScanQRCode.png "用验证器扫码")  
+![用验证器扫码](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/7-ScanQRCode.png "用验证器扫码")  
 
 ⑤app会给出一个验证码，写上去  
-![填写Authenticator验证码](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/8-EnterCode.png "填写Authenticator验证码")  
+![填写Authenticator验证码](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/8-EnterCode.png "填写Authenticator验证码")  
 
 ⑥再`Turn on 2-Step Verification`  
-![启动2步验证](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/9-TurnOnTwoStepVerification.png "启动2步验证")  
+![启动2步验证](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/9-TurnOnTwoStepVerification.png "启动2步验证")  
 
 ⑦他会要求`Get backup codes`，把备份码下载保存即可  
-![保存备份码](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/10-BackupCodes.png "保存备份码")  
+![保存备份码](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/10-BackupCodes.png "保存备份码")  
 
 ⑧完成  
-![2步验证设置完成](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/11-Done.png "2步验证设置完成")  
+![2步验证设置完成](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/11-Done.png "2步验证设置完成")  
 
 
 （5）从<u>https://gemini.google.com/gems/create?hl=en-US&pli=1</u>（创建智能体）这里间接进入Gemini  
-![绕路走](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/12-IndirectEntry.png "绕路走")  
+![绕路走](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/12-IndirectEntry.png "绕路走")  
 
 点击`New chat`后就可以正常对话了（之后也可以从首页进去了）
-![开启对话](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/13-NewChat.png "开启对话")  
+![开启对话](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/13-NewChat.png "开启对话")  
 
 我的小号先是直接进Gemini首页，没成功，然后从上面那个网址进去就行了
 
@@ -91,7 +91,7 @@
 （5）<u>[Google Account](https://myaccount.google.com/)</u>首页可能会提醒设置住址、绑卡，我老号点了`dismiss`，小号没管，可能不管他会安全一点
 
 然后`Security & sign-in`最上面有个`Security Checkup`，他有个“增强型安全浏览”（`Enhanced Safe Browsing`），我怕开了会识破我的伪装（虽然他肯定早就知道了😅）    
-![安全检查](/assets/images/问题排查/解决Gemini异常：SomethingWentWrong/14-SecurityCheckup.png "安全检查")  
+![安全检查](/assets/images/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong/14-SecurityCheckup.png "安全检查")  
 
 （6）知乎/浏览器搜`Gemini Something Went Wrong`可以找到一堆文章，但是感觉新发布的要好一点
 

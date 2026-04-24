@@ -151,7 +151,7 @@ npm install
 > <u>[开通阿里云对象存储服务](/技术教程类/云服务/对象存储服务/开通阿里云对象存储服务.md)</u>  
 > <u>[PageHelper简介](/技术教程类/开发工具&插件/PageHelper/PageHelper简介.md)</u>  
 > <u>[IDEAMaven项目打包](/技术教程类/项目打包/IDEAMaven项目打包.md)</u>  
-> <u>[MyBatis驼峰转换](/问题排查/MyBatis驼峰转换.md)</u>  
+> <u>[MyBatis驼峰转换](/问题排查/框架与中间件/MyBatis/MyBatis驼峰转换.md)</u>  
 > <u>[MyBatis基础学习笔记](/技术教程类/框架使用/MyBatis/MyBatis基础学习笔记.md)</u>  
 > <u>[MyBatis配置Mapper.xml模板](/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板.md)</u>  
 > <u>[MyBatis配置SQL注解提示](/技术教程类/框架使用/MyBatis/MyBatis配置SQL注解提示.md)</u>  
