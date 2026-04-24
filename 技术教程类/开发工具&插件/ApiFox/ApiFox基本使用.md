@@ -11,35 +11,35 @@
 
 ## 2、安装
 （1）在<u>[ApiFox官网](https://apifox.com/)</u>下载应用 → 打开安装器
-![默认选项即可](/assets/images/技术教程类/ApiFox基本使用/01-OfficialWebsite.png "默认选项即可")  
+![默认选项即可](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/01-OfficialWebsite.png "默认选项即可")  
 👇网页端需要下插件  
-![在线使用](/assets/images/技术教程类/ApiFox基本使用/02-UseOnline.png "在线使用")  
+![在线使用](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/02-UseOnline.png "在线使用")  
 
 （2）安装选项：默认的`仅为我安装`  
-![仅为我安装](/assets/images/技术教程类/ApiFox基本使用/03-InstallForMeOnly.png "仅为我安装")  
+![仅为我安装](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/03-InstallForMeOnly.png "仅为我安装")  
 
 （3）选择安装位置  
-![选择安装位置](/assets/images/技术教程类/ApiFox基本使用/04-SelectInstallDirctory.png "选择安装位置")  
+![选择安装位置](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/04-SelectInstallDirctory.png "选择安装位置")  
 
 （4）等待安装成功  
-![安装完成](/assets/images/技术教程类/ApiFox基本使用/05-FinishInstall.png "安装完成")  
+![安装完成](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/05-FinishInstall.png "安装完成")  
 
 
 
 ## 3、基本使用
 ### (1)新建测试接口
 打开应用 → 登录 → `创建空白项目`  
-![微信扫码登录](/assets/images/技术教程类/ApiFox基本使用/06-LogIn.png "微信扫码登录")  
-![创建空白项目](/assets/images/技术教程类/ApiFox基本使用/07-CreateProject.png "创建空白项目")  
-![命名](/assets/images/技术教程类/ApiFox基本使用/08-NameProject.png "命名")  
+![微信扫码登录](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/06-LogIn.png "微信扫码登录")  
+![创建空白项目](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/07-CreateProject.png "创建空白项目")  
+![命名](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/08-NameProject.png "命名")  
 
 `新建Http接口`
-![新建接口](/assets/images/技术教程类/ApiFox基本使用/09-CreateHttpInterface.png "新建接口")  
+![新建接口](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/09-CreateHttpInterface.png "新建接口")  
 
 
 ### (2)测试
 启动SpringBoot项目，把链接（`http://localhost:8080` + `Controller`一个方法的`Mapping`路径）复制到ApiFox里面，然后选择操作类型（增Post删Delete改Put查Get）比如GET，点击`发送`，就可以得到JSON字符串
-![接收JSON](/assets/images/技术教程类/ApiFox基本使用/10-TestInterface.png "接收JSON")  
+![接收JSON](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/10-TestInterface.png "接收JSON")  
 
 我这里只有`@RequestMapping`，于是不管哪种操作类型，都会走这条路径调用这个方法，就会得到同一种结果
 ```java
@@ -71,7 +71,7 @@
 同理还有`@Post/Delete/PutMapping`
 
 指定该查询方法对应`GET`后，再使用同一链接、选择其他操作，就会显示`Method Not Allowed`
-![操作类型和注解不一致](/assets/images/技术教程类/ApiFox基本使用/11-MethodNotAllowed.png "操作类型和注解不一致")  
+![操作类型和注解不一致](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/11-MethodNotAllowed.png "操作类型和注解不一致")  
 
 
 ### (4)补充
@@ -89,7 +89,7 @@
     }
 ```
 只需要在ApiFox里面选择`DELETE`、粘贴URL`http://localhost:8080/depts?id=1`就可以删除`id=1`的部门——也可以手动添加参数
-![](/assets/images/技术教程类/ApiFox基本使用/12-RequestParam.png "")  
+![](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/12-RequestParam.png "")  
 
 * `@RequestBody`注解: 传入JSON字符串，转换成方法参数里面的对象
 ```java
@@ -110,7 +110,7 @@ JSON字符串不是放进URL里面的，而是写在ApiFox的`Http接口`的`Bod
     				"name" : "研发部"
 }
 ```
-![](/assets/images/技术教程类/ApiFox基本使用/13-RequestBody.png "")  
+![](/assets/images/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用/13-RequestBody.png "")  
 
 ---
 

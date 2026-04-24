@@ -153,16 +153,16 @@ sql = "SELECT * FROM users WHERE username = '${username}' AND password = '${pass
 
 
 ## 4、`MyBatisX`插件
-![下载插件](/assets/images/技术教程类/MyBatis基础学习笔记/01-MyBatisX.png "下载插件")  
+![下载插件](/assets/images/技术教程类/框架使用/MyBatis/MyBatis基础学习笔记/01-MyBatisX.png "下载插件")  
 👇点击小鸟🐦图标可以跳到对应的`Mapper`接口（：其他的功能还在研究~~~
-![xml文件和接口类的小鸟颜色不一样](/assets/images/技术教程类/MyBatis基础学习笔记/02-ClickTheBird.png "xml文件和接口类的小鸟颜色不一样")  
+![xml文件和接口类的小鸟颜色不一样](/assets/images/技术教程类/框架使用/MyBatis/MyBatis基础学习笔记/02-ClickTheBird.png "xml文件和接口类的小鸟颜色不一样")  
 
 
 
 ## 5、相关文章
 > <u>[`MyBatis`配置SQL注解提示](/技术教程类/MyBatis配置SQL注解提示.md)</u>  
 > <u>[`MyBatis`配置`Mapper.xml`模板](/技术教程类/MyBatis配置Mapper.xml模板.md)</u>  
-> <u>[解决`.properties`文件中文乱码问题](/问题排查/解决.properties文件中文乱码问题.md)</u>  
+> <u>[解决`.properties`文件中文乱码问题](/问题排查/开发工具与IDE/IDEA/文件编码/解决.properties文件中文乱码问题.md)</u>  
 
 ---
 

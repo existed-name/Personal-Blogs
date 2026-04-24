@@ -16,16 +16,16 @@ AI平台会看用户的安全程度和“干净程度”，安全程度：账号
 ## 3、操作
 ### （1）创建Profile
 点击Edge右上角个人头像 → `创建新的个人资料`，就可以得到新的Profile（在`个人资料`里面可以修改）  
-![创建个人配置](/assets/images/技术教程类/Edge防AI风控配置/01-CreateNewProfile.png "创建个人配置")
-![不需要登录账号](/assets/images/技术教程类/Edge防AI风控配置/02-NoSignIn.png "不需要登录账号")
+![创建个人配置](/assets/images/技术教程类/AI博客系列/Edge防AI风控配置/01-CreateNewProfile.png "创建个人配置")
+![不需要登录账号](/assets/images/技术教程类/AI博客系列/Edge防AI风控配置/02-NoSignIn.png "不需要登录账号")
 
 也可以直接点标签栏的`＋`新建标签页
-![一路继续](/assets/images/技术教程类/Edge防AI风控配置/03-StartBrowsing.png "一路继续")
+![一路继续](/assets/images/技术教程类/AI博客系列/Edge防AI风控配置/03-StartBrowsing.png "一路继续")
 之后会有一点风格设置，随便设置即可
 
 
 ### （2）设置`隐私、搜索和服务`
-![进入浏览器设置](/assets/images/技术教程类/Edge防AI风控配置/04-PrivacySettings.png "进入浏览器设置")
+![进入浏览器设置](/assets/images/技术教程类/AI博客系列/Edge防AI风控配置/04-PrivacySettings.png "进入浏览器设置")
 
 ①跟踪防护 → `启用跟踪防护` & `严格`
 
@@ -38,7 +38,7 @@ AI平台会看用户的安全程度和“干净程度”，安全程度：账号
 
 ### （3）防WebRTC泄漏
 AI推荐安装拓展，但是我嫌麻烦😂就用的Edge自带的设置：地址栏搜索<u>edge://flags/</u>进入实验功能 → 搜索`enable-webrtc-hide-local-ips-with-mdns` → `enabled`，它可以把内网IP用一串乱码（mDNS 主机名）替换掉  
-![启用浏览器实验功能](/assets/images/技术教程类/Edge防AI风控配置/05-HideIP.png "启用浏览器实验功能")
+![启用浏览器实验功能](/assets/images/技术教程类/AI博客系列/Edge防AI风控配置/05-HideIP.png "启用浏览器实验功能")
 
 
 ### （4）额外设置（可选）
@@ -55,10 +55,10 @@ AI推荐安装拓展，但是我嫌麻烦😂就用的Edge自带的设置：地�
 （3）指纹遮蔽的梯度大概是：专业指纹浏览器（AdsPower） > 轻量级指纹浏览器（Dolphin Anty） > Chrome ≈ Edge > FireFox，不过应该还没有到用指纹浏览器的地步，而且Edge/Chrome用的人多、看起来更真实
 
 （4）具体的原理、更多设置可以问AI  
-![原理说明](/assets/images/技术教程类/Edge防AI风控配置/06-Explanation.png "原理说明")
+![原理说明](/assets/images/技术教程类/AI博客系列/Edge防AI风控配置/06-Explanation.png "原理说明")
 
 ---
 
 > **往期文章**  
-> <u>[解决Gemini“Something went wrong”](/问题排查/解决Gemini异常：SomethingWentWrong.md)</u>  
+> <u>[解决Gemini“Something went wrong”](/问题排查/AI服务与风控/Gemini/解决Gemini异常：SomethingWentWrong.md)</u>  
 > <u>[Claude网页端注册](/技术教程类/Claude注册.md)</u>  

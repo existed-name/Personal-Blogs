@@ -13,21 +13,21 @@
 
 ## 2、安装
 进入<u>[官网](https://nginx.org/en/)</u> → 右侧菜单栏`download` → 选择`Stable Version`的`nginx/Windows-版本号`(假设系统是Windows)  
-![](/assets/images/技术教程类/Nginx基本使用/01-OfficialWebsite.png "")  
-![](/assets/images/技术教程类/Nginx基本使用/02-Download.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/01-OfficialWebsite.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/02-Download.png "")  
 (`Mainline Version`是尝试新功能的版本)
 
 解压后点击运行`nginx.exe`，有个黑屏幕一闪而过，然后`Ctrl + Shift + Esc`打开任务管理器看得到运行进程，说明运行成功  
-![](/assets/images/技术教程类/Nginx基本使用/03-ContinueToRun.png "")  
-![](/assets/images/技术教程类/Nginx基本使用/04-TaskManager.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/03-ContinueToRun.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/04-TaskManager.png "")  
 
 
 
 ## 3、基本使用
 ### (1)
 在conf文件夹找到nginx.conf，里面有Nginx的默认端口号80，可以改成90，目的是避免冲突(其他应用也可能占用80端口号)  
-![](/assets/images/技术教程类/Nginx基本使用/05-Config.png "")  
-![](/assets/images/技术教程类/Nginx基本使用/06-ListenPort.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/05-Config.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/06-ListenPort.png "")  
 ```Nginx
 server {
     listen       90;        # Nginx 监听的端口
@@ -40,14 +40,14 @@ server {
 
 ### (2)​
 访问`http://localhost:90`（根据自己设定的`conf`端口号来访问），可以打开Nginx的欢迎界面​  
-![](/assets/images/技术教程类/Nginx基本使用/07-HelloNginx.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/07-HelloNginx.png "")  
 
 
 ### (3)
 我按照AI给的方案一修改Nginx、SpringBoot配置，重新运行项目、Nginx(可以从任务管理器终止任务)，对于`http://localhost:8080/depts`对应的界面(展示所有的部门信息)，就可以通过`http://localhost:90/api/depts`来访问相同界面，只是链接被“中转”了一下，路径更规范安全  
-![](/assets/images/技术教程类/Nginx基本使用/08-Solution1.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/08-Solution1.png "")  
 👆方案1-方案2👇  
-![](/assets/images/技术教程类/Nginx基本使用/09-Solution2.png "")  
+![](/assets/images/技术教程类/开发工具&插件/Nginx/Nginx基本使用/09-Solution2.png "")  
 
 ---
 

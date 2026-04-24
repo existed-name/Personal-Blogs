@@ -154,10 +154,10 @@ PageInfo<Emp> pageInfo = new PageInfo<>(empList);
 
 ### (2)效果展示
 ApiFox请求数据: `http://localhost:8080/emps?page=1&pageSize=5`
-![](/assets/images/技术教程类/PageHelper简介/01-Test.png "")  
+![](/assets/images/技术教程类/开发工具&插件/PageHelper/PageHelper简介/01-Test.png "")  
 
 如果没开PageHelper的`参数合理化`配置，查询错误的`page = -1`会返回空列表👇
-![](/assets/images/技术教程类/PageHelper简介/02-WrongParameter.png "")  
+![](/assets/images/技术教程类/开发工具&插件/PageHelper/PageHelper简介/02-WrongParameter.png "")  
 
 ---
 > **往期文章**  

@@ -19,15 +19,15 @@ IDEA菜单栏 → File → Settings → Editor → `File and Code Templates` 中
 
 </mapper>
 ```
-![配置展示](/assets/images/技术教程类/MyBatis配置Mapper.xml模板/01-Settings.png "配置展示")  
+![配置展示](/assets/images/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板/01-Settings.png "配置展示")  
 
 ### （2）创建文件
 选择1个文件(夹) → 右键后点击`New`(也可以直接`Alt + Shift + Insert`) → `MyBatis Mapper`  
-![创建文件](/assets/images/技术教程类/MyBatis配置Mapper.xml模板/02-NewFile.png "创建文件")  
-![命名不需要带文件后缀](/assets/images/技术教程类/MyBatis配置Mapper.xml模板/03-UserMapper.png "命名不需要带文件后缀")  
+![创建文件](/assets/images/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板/02-NewFile.png "创建文件")  
+![命名不需要带文件后缀](/assets/images/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板/03-UserMapper.png "命名不需要带文件后缀")  
 
 甚至命名空间都自动生成了  
-![自动化~~~](/assets/images/技术教程类/MyBatis配置Mapper.xml模板/04-AutoTemplate.png "自动化~~~")  
+![自动化~~~](/assets/images/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板/04-AutoTemplate.png "自动化~~~")  
 
 ---
 
