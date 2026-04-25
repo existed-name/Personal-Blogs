@@ -120,7 +120,7 @@
 
 
 # 5、附
-1. 连接超时通常是配置问题
+1. 连接超时(`java.net.ConnectException: Connection timed out: connect`)通常是配置问题
     * 确保VirtualBox的端口转发子系统/客户机IP = 虚拟机的IP
     * 端口转发`主机端口` = FinalShell连接设置的端口
     * 虚拟机偶尔会抽风，每次启动都需要`ip addr show`检查有没有出现预期的`192.168.100.xxx`，没有的话就退出、重新打开
