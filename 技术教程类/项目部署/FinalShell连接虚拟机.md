@@ -16,6 +16,7 @@
 * FinalShell是一款SSH(`Secure Shell`)远程连接客户端软件，这里用来连接虚拟机上传文件
 * 虚拟机软件: VirtualBox7.2.4
 * 虚拟机系统: Debian13.1.0
+* 系列文章: <u>[Linux部署SpringBoot项目](/技术教程类/项目部署/Linux部署SpringBoot项目.md)</u>
 
 
 
