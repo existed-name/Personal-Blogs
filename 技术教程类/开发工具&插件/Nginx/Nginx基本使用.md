@@ -216,7 +216,7 @@ pause
 > **往期文章**  
 > <u>[ApiFox基本使用](/技术教程类/开发工具&插件/ApiFox/ApiFox基本使用.md)</u>  
 > <u>[IDEAMaven项目打包](/技术教程类/项目打包/IDEAMaven项目打包.md)</u>  
-> <u>[MyBatis驼峰转换](/技术教程类/框架使用/MyBatis/MyBatis驼峰转换.md)</u>  
+> <u>[MyBatis驼峰转换](/问题排查/框架与中间件/MyBatis/MyBatis驼峰转换.md)</u>  
 > <u>[MyBatis基础学习笔记](/技术教程类/框架使用/MyBatis/MyBatis基础学习笔记.md)</u>  
 > <u>[MyBatis配置Mapper.xml模板](/技术教程类/框架使用/MyBatis/MyBatis配置Mapper.xml模板.md)</u>  
 > <u>[MyBatis配置SQL注解提示](/技术教程类/框架使用/MyBatis/MyBatis配置SQL注解提示.md)</u>  
