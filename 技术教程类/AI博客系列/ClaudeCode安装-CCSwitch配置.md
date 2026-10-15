@@ -28,8 +28,10 @@
 
 * 这里是配置清单
     - NVM(`Node Version Manager`): 集中管理 Node、切换 Node 版本, 就不用单独下载 Node 了
-    - Git(可选): Claude Code 用来提交代码
-    - Windows PowerShell: 用 cmd 可能不太兼容(比如图形化显示)
+    - Git: git bash 兼容性更好, 方便 claude code 跑命令、提交代码
+    - Windows PowerShell / cmd 都行, 用来打开他
+      * 顺带说一句, 这俩命令行打开的 cc 对话框可以用 ctrl + enter 换行, 但 IDE Terminal 打开的 cc 不能换行
+      * 并且还是建议用命令行打开 cc, 用 IDE 打开命令行虽然不用切换项目目录，但如果 IDE 卡死了就不好弄里面正在跑的 cc
     - 官网订阅模型的 API Key
 
 
@@ -59,7 +61,15 @@
        nvm npm_mirror https://npmmirror.com/mirrors/npm/
     ```
 
-3. 配置好后命令行 `nvm install 22`、`nvm use 22` 使用 Node22( Claude Code 最低 Node18，Node24 可能有点新、避免不兼容 )
+3. 配置好 nvm 后用它来装 Node
+    * 我这里 5 月份写的教程，用的 Node22
+    * Claude Code 最低 Node22，现在快 2027 了，读者可以装更新的 node24 LTS
+    
+    ```shell
+    # 安装、切换全局 Node
+    nvm install 22
+    nvm use 22
+    ```
 
 4. 注意检查 npm 全局路径
 
@@ -163,11 +173,12 @@
 
    ![](/assets/images/技术教程类/AI博客系列/ClaudeCode安装-CCSwitch配置/08.png "")
 
-5. 进去过后点击右上角 `➕`，添加供应商，自定义配置
-   * 填写相关信息
-   * 可以让 AI 生成一个详细的 JSON 配置模板，改成自己的数据，再填进去
+5. 进去过后点击右上角 `➕`，添加供应商
+    * 我当时用的自定义配置，实际可以直接用 CC Switch 提供的官方 API 调用配置模板
+    * 填写相关信息, api key、模型映射( 把 Claude 的几个模型设为自己厂商提供的模型, 比如 Fable/Opus 设 deepseek-v4-pro, Sonnet/Haiku 设 deepseek-flash )
+    * 可以让 AI 生成一个详细的 JSON 配置模板，改成自己的数据，再填进去，后续也可以拿着配置找 AI 优化（比如放大命令权限、钩子等等）
 
-   ![](/assets/images/技术教程类/AI博客系列/ClaudeCode安装-CCSwitch配置/09.png "")
+    ![](/assets/images/技术教程类/AI博客系列/ClaudeCode安装-CCSwitch配置/09.png "")
 
 6. 保存后回到主页面，切换到自己的模型
 
