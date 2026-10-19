@@ -6,7 +6,8 @@
 
 > WSL（Windows Subsystem for Linux） 是 Windows 内置的轻量级 Linux 兼容环境，无需虚拟机或双系统即可运行完整 GNU/Linux 发行版并与 Windows 无缝集成，其 WSL 2 基于轻量虚拟化提供真实 Linux 内核和完整系统调用兼容性，是当前推荐版本
 
-* 用途: docker desktop 默认依赖 wsl 来运行 Docker 容器, redis 也需要跑在 Linux 环境上面
+* 用途: docker desktop 默认依赖 wsl 来运行 Docker 容器（本地部署）, redis 也需要跑在 Linux 环境上面
+* 电脑系统：Windows11 + WSL2
 
 ## 安装
 
@@ -71,4 +72,5 @@ Remove-Item "D:\Users\Programming\Virtual-Mechine\WSL\Ubuntu.tar"
     ```
 
 * 后续 `wsl -d ubuntu` 进入 WSL 即可
+* 话说之前 Windows 频繁弹出命令行提醒我装 `适用于 Linux 的 Windows 子系统`（不知道触发条件是什么），装了 WSL 就没再提醒了
 
