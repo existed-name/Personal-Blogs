@@ -15,14 +15,14 @@
 2. 输入 ` wsl --install -d Ubuntu` 安装 ubuntu 发行版内核的 WSL，这里默认安到 C 盘，之后迁移到 D 盘
 3. 等待...
 
-    ![01.png](/assets/images/技术教程类/虚拟机/wsl/01.png)
-    ![02.png](/assets/images/技术教程类/虚拟机/wsl/02.png)
-    ![03.png](/assets/images/技术教程类/虚拟机/wsl/03.png)
-    ![04.png](/assets/images/技术教程类/虚拟机/wsl/04.png)
+    ![01.png](/assets/images/技术教程类/虚拟机/wsl/安装WSL/01.png)
+    ![02.png](/assets/images/技术教程类/虚拟机/wsl/安装WSL/02.png)
+    ![03.png](/assets/images/技术教程类/虚拟机/wsl/安装WSL/03.png)
+    ![04.png](/assets/images/技术教程类/虚拟机/wsl/安装WSL/04.png)
 
 4. 设置用户名、密码, 然后会自动进入
 
-    ![05.png](/assets/images/技术教程类/虚拟机/wsl/05.png)
+    ![05.png](/assets/images/技术教程类/虚拟机/wsl/安装WSL/05.png)
 
 ## 迁移到 D 盘
 
@@ -45,7 +45,7 @@ wsl --import Ubuntu "D:\Users\Programming\Virtual-Mechine\WSL\Ubuntu"
 Remove-Item "D:\Users\Programming\Virtual-Mechine\WSL\Ubuntu.tar"
 ```
 
-![06-move-to-d-disk.png](/assets/images/技术教程类/虚拟机/wsl/06-move-to-d-disk.png)
+![06-move-to-d-disk.png](/assets/images/技术教程类/虚拟机/wsl/安装WSL/06-move-to-d-disk.png)
 
 * 然后把默认登录用户从 root 改成自己的用户名
 
