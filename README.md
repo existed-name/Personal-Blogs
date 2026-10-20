@@ -67,12 +67,15 @@
     │  ├─云服务
     │  │  ├─云服务器                      # 阿里云 ECS
     │  │  └─对象存储服务                   # 阿里云 OSS
+    │  ├─基础设施-中间件
+    │  │  ├─mysql
+    │  │  ├─Nginx
+    │  │  └─redis
     │  ├─开发工具&插件
     │  │  ├─ApiFox
     │  │  ├─DataGrip博客系列
     │  │  ├─Git
     │  │  ├─IDEA
-    │  │  ├─Nginx
     │  │  ├─PageHelper
     │  │  └─内网穿透
     │  │      ├─Cpolar
