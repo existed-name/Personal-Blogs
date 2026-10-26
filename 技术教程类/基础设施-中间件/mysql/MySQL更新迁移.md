@@ -70,7 +70,7 @@
 
 ## 下载新版本压缩包
 
-* 来到[官网下载界面](https://downloads.mysql.com/archives/community/), 选择版本 8.4、操作系统 Windows，然后下载 zip 安装包
+* 来到<u>[官网下载界面](https://downloads.mysql.com/archives/community/)</u>, 选择版本 8.4、操作系统 Windows，然后下载 zip 安装包
 
     ![01-download.png](/assets/images/技术教程类/基础设施-中间件/mysql/MySQL更新迁移/01-download.png)
 
@@ -235,6 +235,7 @@
   
 * 我这里发现 `where xxx` 出现了新版本、旧版本的路径，发现是用户变量还有一个旧版本 mysql 的绝对路径
 * 于是直接删除用户变量里面的旧 mysql 路径，只留新版本
+* 注意修改路径变量用 PowerShell 避免 cmd 的 setx 截断长路径以及一些潜在问题
 
     ```shell
     # 将当前的用户 Path 变量值保存到 D 盘，便于出错时还原
